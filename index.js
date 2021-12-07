@@ -19,7 +19,7 @@ const routes= require('./routes/index');
 app.use("/", routes);
 app.use(notfound);
 app.use(errorHandler);
-const port = process.env.PORT || 5000 ;
+const port = process.env.PORT || 3000 ;
 
 if(process.env.NODE_ENV === "production")
 {
