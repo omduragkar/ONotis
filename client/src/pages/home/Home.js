@@ -15,11 +15,11 @@ const Home = () => {
     
     return (
         <div className='m-3'>
-            <img src="./images/home1.jpg" alt="home1"/>
+            <img src="./images/home1.jpg" alt="home1" className='frontimg'/>
             <div className='headmaindiv'>
                 <h1 className='headmain mb-3'>Keep up the Note Secure!</h1>
-                <Button variant="outline-success" onClick={()=>{history.push("/user/login")}} className="mr-sm-2 btn-login" >Login</Button>
-                <Button variant="outline-dark" onClick={()=>{history.push("/user/register")}} className="mx-2 btn-login" >Signup</Button> 
+                <Button variant="outline-success" onClick={()=>{history.push("/user/login")}} className="button-main-log" >Login</Button>
+                <Button variant="outline-dark" onClick={()=>{history.push("/user/register")}} className="button-main-log" >Signup</Button> 
             </div>
             <div>
                 <h2 className='text-center m-5'>Explore Oboard!</h2>
