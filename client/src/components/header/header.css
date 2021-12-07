@@ -1,0 +1,72 @@
+.navmain{
+    margin: auto;
+}
+#basic-navbar-nav{
+    justify-content: space-between;
+
+}
+
+.form-inline{
+    width: 40%;
+}
+.form-inline>input{
+    width: 65%;
+}
+.form-inline>button{
+    width: 28%;
+}
+
+
+.btn-log{
+    width: 30%;
+    text-align: center;
+}
+.btn-login{
+    width:46%;
+}
+
+.onotisbrand{
+    text-decoration: none !important;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.btn-userout{
+    display: inline;
+
+}
+
+.userout{
+
+    display: inline-block;
+}
+
+@media only screen and (max-width: 990px) {
+    .btn-log{
+        width: 100%;
+        text-align: center;
+        margin: 3px;
+        margin-top: 5px;
+    }
+    .btn-login{
+        justify-content: center;
+        align-items: center;
+        width:60%;
+        margin-left: auto;
+        margin: 5px;
+    }
+    .form-inline{
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+    .form-inline>input{
+        width: 90%;
+        margin: 4px;
+        
+    }
+    .form-inline>button{
+        margin: 3px;
+        width: 40%;
+    }
+    
+}

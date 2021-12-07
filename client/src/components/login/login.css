@@ -1,0 +1,36 @@
+.logincont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.lbtn{
+    cursor: pointer;
+}
+.headreg1{
+    display: none;
+
+}
+
+.logincontin{
+    width: 65%;
+}
+
+@media only screen and (max-width: 500px) {
+    .headlog{
+        display: none;
+    }
+    .headreg1{
+        display: block;
+        padding-top: 10%;
+    }
+    .logincontin{
+        margin-top: 10%;
+        width: 95%;
+    }
+    .lbtn{
+        display: block;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,28 @@
+.logincont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headreg{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-weight: bold;
+    font-size: 25;
+}
+.logincontin{
+    width: 65%;
+}
+.click-reg{
+    cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+    .logincontin{
+        width: 95%;
+    }
+    .click-reg{
+        display: block;
+        cursor: pointer;
+    }
+}
+
