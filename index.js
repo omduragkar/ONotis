@@ -20,9 +20,9 @@ const routes= require('./routes/index');
 app.use("/", routes);
 if(process.env.NODE_ENV === "production")
 {
-    app.use(express.static(path.join(`${__dirname}/client/builld`)));
+    app.use(express.static(path.join(`${__dirname}/client/build`)));
     app.get('/*', (req, res)=>{
-        res.sendFile(path.join(`${__dirname}/client/builld`));
+        res.sendFile(path.join(`${__dirname}/client/build`));
     });
 }
 app.use(notfound);
