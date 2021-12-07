@@ -6,6 +6,7 @@ const connectDB = require("./config/db");
 // var bodyParser = require("body-parser");
 const errorHandler =  require('./middlewares/generror');
 const notfound = require("./middlewares/routeerror");
+const path = require('path');
 
 dotenv.config();
 connectDB();
@@ -17,14 +18,17 @@ app.use(express.json());
 
 const routes= require('./routes/index');
 app.use("/", routes);
+if(process.env.NODE_ENV === "production")
+{
+    app.use(express.static(path.join(`${__dirname}/client/builld`)));
+    app.get('/*', (req, res)=>{
+        res.sendFile(path.join(`${__dirname}/client/builld`));
+    });
+}
 app.use(notfound);
 app.use(errorHandler);
 const port = process.env.PORT || 3000 ;
 
-if(process.env.NODE_ENV === "production")
-{
-    app.use(express.static("client/build"));
-}
 
 app.listen(port, (err)=>{
     if(err)
