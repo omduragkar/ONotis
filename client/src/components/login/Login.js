@@ -60,11 +60,11 @@ const Login = ()=> {
                 <Form.Control onChange={(e)=>{change(e)}} name="password" value={user.password || ""} type="password" placeholder="Password" />
               </Form.Group>
               <Form.Group controlId="formBasicCheckbox"  className="m-3">
-                <Form.Check type="checkbox" label="Check me out" />
+                <Form.Check type="checkbox" label="Remember Me" />
               </Form.Group>
               <div className='text-center'>
-                <Button variant="primary" className="sbtn m-3" type="submit">
-                  Submit
+                <Button variant="outline-primary" className="sbtn m-3" type="submit">
+                  Login
                 </Button>
                 <a onClick={()=>{history.push("/user/register")}}  className="m-3 lbtn">
                   Need to register?
