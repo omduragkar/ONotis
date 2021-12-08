@@ -27,10 +27,10 @@ if(process.env.NODE_ENV === "production")
 }
 app.use(notfound);
 app.use(errorHandler);
-const port = process.env.PORT || 3000 ;
+const port = process.env.PORT || 4000 ;
+const host = '0.0.0.0';
 
-
-app.listen(port, (err)=>{
+app.listen(port, host, (err)=>{
     if(err)
     {
         console.log(err);
