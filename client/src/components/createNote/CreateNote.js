@@ -57,7 +57,7 @@ const CreateNote = () => {
                     </Form.Group>
 
                     <Form.Group controlId="content">
-                    <Form.Label>Content</Form.Label>
+                    <Form.Label className="my-3">Content</Form.Label>
                     <Form.Control
                         as="textarea"
                         value={content}

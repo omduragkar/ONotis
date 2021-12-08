@@ -44,7 +44,7 @@ export const Header = () => {
                 
                     {
                         usermain.userinfo?
-                        <>
+                        <div className='text-center my-2'>
                             <NavDropdown title={usermain.userinfo.name} className='userout'>
                                 <NavDropdown.Item onClick={()=>{history.push("/userprofile")}} >My Profile</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
@@ -58,7 +58,7 @@ export const Header = () => {
                                 history.push("/");
 
                             }} >Logout</Button>
-                        </>
+                        </div>
                         :
                         <div className='btn-log'>
                             <Button variant="outline-secondary" onClick={()=>{history.push("/user/login")}} className="btn-login" >Login</Button>
