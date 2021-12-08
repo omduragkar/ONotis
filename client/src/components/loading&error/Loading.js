@@ -1,10 +1,11 @@
 import React from 'react'
+import { Spinner } from 'react-bootstrap'
 
 const Loading = () => {
     return (
-        <h1>
-            Loading...
-        </h1>
+        <div className='w-100 h-100 m-auto p-auto text-center'>
+            <Spinner className='m-auto p-auto text-center' animation="border" variant="primary" />
+        </div>
     )
 }
 

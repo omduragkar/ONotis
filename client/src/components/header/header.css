@@ -16,7 +16,6 @@
     width: 28%;
 }
 
-
 .btn-log{
     width: 30%;
     text-align: center;
@@ -27,8 +26,8 @@
 
 .onotisbrand{
     text-decoration: none !important;
-    font-weight: bolder;
-    font-size: xx-large;
+    font-weight: 800;
+    font-size: 35px;
 }
 .btn-userout{
     display: inline;
@@ -40,19 +39,18 @@
     display: inline-block;
 }
 
+@media only screen and (max-width: 1023px) {
+
+    .btn-login{
+        width: 40%;
+    }
+}
 @media only screen and (max-width: 990px) {
     .btn-log{
         width: 100%;
         text-align: center;
         margin: 3px;
         margin-top: 5px;
-    }
-    .btn-login{
-        justify-content: center;
-        align-items: center;
-        width:60%;
-        margin-left: auto;
-        margin: 5px;
     }
     .form-inline{
         margin: auto;
@@ -64,9 +62,36 @@
         margin: 4px;
         
     }
+    .btn-div-log{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+    .btn-login{
+        justify-content: center;
+        align-items: center;
+        width:60%;
+        margin-left: auto;
+        margin: 5px;
+        text-align: center;
+    }
     .form-inline>button{
         margin: 3px;
         width: 40%;
+    }
+    
+}
+
+@media only screen and (max-width: 501px) {
+    .btn-log{
+        display: block;
+        width: 100%;
+        height: max-content;
+        text-align: center;
+        margin: auto;
+    }
+    .btn-login{
+        text-align: center;
     }
     
 }

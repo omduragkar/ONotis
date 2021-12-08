@@ -6,6 +6,7 @@ import MyNotes from "./pages/myNotes/MyNotes";
 import Oboard from "./pages/oboard/Oboard";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
+import CreateNote from "./components/createNote/CreateNote";
 function App(props) {
   
   return (
@@ -26,6 +27,9 @@ function App(props) {
         </Route>
         <Route path="/mynotes" exact>
          <MyNotes/>
+        </Route>
+        <Route path="/createnote" exact>
+         <CreateNote/>
         </Route>
       </main>
       <Footer/>

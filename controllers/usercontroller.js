@@ -1,10 +1,10 @@
 const { connection } = require("mongoose");
 const User = require("../models/user");
 const expressAsyncHandler = require("express-async-handler");
+const generateTokens = require("../middlewares/generateToken");
 
 module.exports.createSession = expressAsyncHandler(async (req, res)=>{
     // console.log(req.body);
-    // console.log(req.body.name);
     if(req.body.password === req.body.confirmpassword)
     {
 
@@ -24,7 +24,15 @@ module.exports.createSession = expressAsyncHandler(async (req, res)=>{
             })
             if(user)
             {
-                res.status(201).json(user);
+                res.status(201).json({
+                    _id:user._id,
+                    name: user.name,
+                    email: user.email,
+                    password: user.password,
+                    avatar: user.avatar,
+                    dob: user.dob,
+                    token: generateTokens(user._id),
+                });
             }
             else{
                 res.status(400);
@@ -45,7 +53,15 @@ module.exports.joinSession = expressAsyncHandler(async (req, res)=>{
     const user = await User.findOne({email:x.email}); 
     if(user && (await user.matchPassword(x.password)))
     {
-        res.json(user);
+        res.json({
+            _id:user._id,
+            name: user.name,
+            email: user.email,
+            password: user.password,
+            avatar: user.avatar,
+            dob: user.dob,
+            token: generateTokens(user._id),
+        });
     }
     else{
         res.status(400);

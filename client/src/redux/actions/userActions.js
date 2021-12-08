@@ -14,7 +14,7 @@ export const userLogin = (email, password) => async (dispatch)=>{
         }
         // console.log(x)
         console.log("using axios");
-        const data = await axios.post("/auth/user/login",x, config);
+        const data = await axios.post("http://localhost:5000/auth/user/login",x, config);
         dispatch({type: ULS, payload: data});
         localStorage.setItem("userInfo", JSON.stringify(data));
     }
@@ -56,7 +56,7 @@ export const register = (email, password, confirmpassword, name, dob, avatar="om
             avatar,
         }
         console.log("using axios");
-        const data = await axios.post("/auth/user/register",x, config);
+        const data = await axios.post("http://localhost:5000/auth/user/register",x, config);
         dispatch({type: URS, payload: data});
         localStorage.setItem("userInfo", JSON.stringify(data));
     }

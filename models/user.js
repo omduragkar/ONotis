@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
     {
         type:String,
         required: true,
-        default:"https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"
+        default:"om"
     },
     dob:{
         type:String,

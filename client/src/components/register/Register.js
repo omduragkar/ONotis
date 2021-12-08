@@ -6,7 +6,7 @@ import { register } from '../../redux/actions/userActions';
 import Error from '../loading&error/Error';
 import Loading from '../loading&error/Loading';
 import "./register.css"
-
+import mobile from "./signupmobile.svg";
 const Register = ()=> {
     const history = useHistory();
     const dispatch = useDispatch();
@@ -35,8 +35,8 @@ const Register = ()=> {
   }, [history, usermain.userinfo])
   return (
       <>
-        <h1 className='text-center m-auto p-auto headreg'>Register</h1>
-        <Container className='container-fluid logincont'>
+        <h1 className='headreg'>Register</h1>
+        <Container className='container logincont my-3'>
             <Form className="logincontin" onSubmit={(e)=>clicksubmit(e)}>
                 {usermain.loading && <Loading/>}
                 {usermain.error && <Error error={usermain.error} />}
@@ -77,6 +77,7 @@ const Register = ()=> {
 
                 </Form.Group>   
             </Form>
+            <h1 style={{backgroundImage:`url(${mobile})`, backgroundRepeat:'no-repeat',height:'500px', width:'500px', paddingLeft:"10%",fontWeight:"700"}} className="headreg123" alt="home1">Register</h1>
         </Container>
     </>
     );

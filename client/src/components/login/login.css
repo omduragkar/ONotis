@@ -5,6 +5,11 @@
     align-items: center;
 
 }
+.headlog{
+    font-weight: 600;
+    margin-top: 3%;
+    padding-top: 5%;
+}
 .lbtn{
     cursor: pointer;
 }

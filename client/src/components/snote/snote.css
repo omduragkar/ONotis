@@ -1,0 +1,26 @@
+.actitle{
+    display: inline-block;
+    width: 50%;
+    
+}
+
+.acbutton{
+    display: inline-block;
+    width: 50%;
+    text-align: end;
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .actitle{
+        display: block;        
+        width: 100%;
+    }
+    .acbutton{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    
+}

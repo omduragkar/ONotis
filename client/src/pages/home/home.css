@@ -1,47 +1,85 @@
-.headmaindiv{
+.img1{
     display: inline-block;
-    margin: auto;
-    width: 50%;
-    text-align: center;
+    width: 45%;
+    height: 50%;
 }
-.headmaindiv>button{
-    width: 30%;
-    
+
+.defimg1{
+    height: 100%;
+    width: 100%;
+}
+
+.maindiv
+{
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    width: 45%;
+    height: 50%;
 }
 
 .headmain{
-    text-align: center;
-}
-.button-main-log{
-    margin: 2%;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 3%;
+    font-size: 55px;
 }
 
-@media only screen and (max-width: 1000px) {
-    .frontimg{
-        display: block;
-        width: 90%;
-        height: 10%;
+.btn-login{
+    width: 40%;
+    display: inline-block;
+    margin: 1%;
+}
+.headmain2{
+    font-size: x-large;
+    font-weight: 600;
+}
+.maindiv3{
+    padding-top: -30px;
+}
+@media only screen and (max-width: 900px){
+    .img1{
+        display: none;
+    }
+    .maindiv{
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .headmain{
+        /* font-size: 35px; */
+        font-size: xx-large;
+    }
+    .maindivbtn1{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 650px){
+    
+    .headmain{
+        font-size: x-large;
+    }
+}
+@media only screen and (max-width: 500px){
+    .headmain{
+        font-size: 35px;
+    }
+    .maindivbtn1{
+        width: 100%;
         text-align: center;
         margin: auto;
         padding: auto;
-    }    
-    .headmaindiv{
-        width: 100%;
-        
-    }
-    .headmain{
-        font-weight: 900;
     }
     .btn-login{
-        margin: 5px;
-    }
-    
-}
-@media only screen and (max-width: 400px) {
-    .button-main-log{
         display: block;
+        width: 50%;
         margin-left: auto;
         margin-right: auto;
-        padding: 5%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        padding: auto;
+        text-align: center;
+        
     }
 }

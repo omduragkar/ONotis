@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Button, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import {Link, useHistory} from "react-router-dom"
@@ -14,32 +14,41 @@ export const Header = () => {
             <Link to="/" className='px-3 onotisbrand'>ONotis</Link>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                {/* <Nav className="mr-auto mx-3">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                    </NavDropdown>
-                </Nav> */}
-                <Nav className="mr-auto mx-4">
-                    <Nav.Link onClick={()=>history.push("/mynotes")} className='w-100'>My Notes</Nav.Link>
-                    <Nav.Link onClick={()=>history.push("/oboard")}>OBoard</Nav.Link>
-                </Nav>
+                
+                {
+                        usermain.userinfo?
+                        <>
+                            <Nav className="mr-auto mx-5 ">
+                                <div>
+                                    <Nav.Link onClick={()=>history.push("/mynotes")} className='w-100'>My Notes</Nav.Link>
+                                </div>
+                                <div>
+                                    <Nav.Link onClick={()=>history.push("/createnote")}>Create Note</Nav.Link>
+
+                                </div>
+                            </Nav>
+                        </>
+                        :
+                        <>
+                            <Nav className="mr-auto mx-4">
+                                <Nav.Link onClick={()=>history.push("/mynotes")} className='w-100'>Explore</Nav.Link>
+                                <Nav.Link onClick={()=>history.push("/oboard")}>OBoard</Nav.Link>
+                            </Nav>
+                        </>
+                }
+
                 <Form inline className="form-inline">
                     <FormControl type="text" placeholder="Search" style={{"display": "inline-block"}} className="mr-sm-2 mx-2" />
                     <Button variant="outline-success" className="searchbtn" style={{"display": "inline-block"}}>Search</Button>
                 </Form>
-                <div className='btn-log'>
+                
                     {
                         usermain.userinfo?
                         <>
                             <NavDropdown title={usermain.userinfo.name} className='userout'>
-                                <NavDropdown.Item href="#action/3.1">My Profile({usermain.userinfo.name})</NavDropdown.Item>
+                                <NavDropdown.Item onClick={()=>{history.push("/userprofile")}} >My Profile</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
+                                <NavDropdown.Item onClick={()=>{history.push("/oboard")}} >OBoard</NavDropdown.Item>
                                 {/* <NavDropdown.Divider className='text-dark' /> */}
                             </NavDropdown>
                             <Button variant="outline-danger" className="mx-2 btn-userout" onClick={()=>{
@@ -51,12 +60,11 @@ export const Header = () => {
                             }} >Logout</Button>
                         </>
                         :
-                        <>
-                            <Button variant="outline-secondary" onClick={()=>{history.push("/user/login")}} className="mr-sm-2 btn-login" >Login</Button>
-                            <Button variant="outline-dark" onClick={()=>{history.push("/user/register")}} className="mx-2 btn-login" >Signup</Button> 
-                        </>
-                    }
-                </div>
+                        <div className='btn-log'>
+                            <Button variant="outline-secondary" onClick={()=>{history.push("/user/login")}} className="btn-login" >Login</Button>
+                            <Button variant="outline-dark" onClick={()=>{history.push("/user/register")}} className="btn-login" >Signup</Button> 
+                        </div>
+                }
                 
             </Navbar.Collapse>
         </Navbar>
