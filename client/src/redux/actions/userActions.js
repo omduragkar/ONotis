@@ -14,7 +14,7 @@ export const userLogin = (email, password) => async (dispatch)=>{
         }
         // console.log(x)
         console.log("using axios");
-        const data = await axios.post("https://onotis.up.railway.app/auth/user/login",x, config);
+        const data = await axios.post("http://localhost:4000/auth/user/login",x, config);
         dispatch({type: ULS, payload: data});
         localStorage.setItem("userInfo", JSON.stringify(data));
     }
