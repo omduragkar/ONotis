@@ -4,7 +4,7 @@
   "description": "Notes making app with basic features and cloud support!",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && node index.js",
     "start": "node index.js"
   },
   "repository": {
