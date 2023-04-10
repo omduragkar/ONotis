@@ -15,7 +15,7 @@ const createnoteaction = (title, content, category)=>async (dispatch, getState)=
                 Authorization:`Bearer ${userinfo.token}`,
             },
         }
-        const data = await axios.post('/api/notes/create',{title, content, category}, config);
+        const data = await axios.post('https://onotis.up.railway.app/api/notes/create',{title, content, category}, config);
         dispatch({type:NCS, payload:data.data})
     } catch (err) {
         console.log(err);

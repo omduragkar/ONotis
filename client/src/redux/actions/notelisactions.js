@@ -14,7 +14,7 @@ export const notelist = ()=>async (dispatch, getState)=>{
                 Authorization:`Bearer ${userinfo.token}`,
             },
         }
-        const data = await axios.get('/api/notes/', config);
+        const data = await axios.get('https://onotis.up.railway.app/api/notes/', config);
         dispatch({type:NLS, payload:data.data})
     } catch (err) {
         console.log(err);
